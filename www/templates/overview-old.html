@@ -1,0 +1,38 @@
+<ion-view>
+    <div>
+        <div class="nav-bar-block titleSection">
+            <h1>Uverse Executive Dashboard</h1>
+            <p class="ligh">Daily Overview - 5 MAR 2015</p>
+        </div>
+        <div class="container">
+            <div id="row1" class="table" >
+              
+                <div id="graphCenter" class="tile table-cell expandable" ng-click="details()">
+                    <!-- <h2>Number of Activations</h2> -->
+                    <highchart id="chart1" config="chartConfig" style="width:100%" class="span10"></highchart>
+                </div>
+
+                <div id="messageCenter" class="tile table-cell trigger" data-dialog="somedialog">
+                    <h2>Message Center</h2>
+                </div>
+            </div>
+            <div id="row2" class="table">
+                <div class="tile table-cell expandable gauge">
+                    <h2>Customer Count</h2><span class="divider"></span><span class="previous">previous week: 221</span><span class="date">05 mar 2015</span><span id="gauge-1" class="svg"></span><span class="count">58k</span>
+                </div>
+                <div class="tile table-cell expandable gauge">
+                    <h2>ISM Intake</h2><span class="divider"></span><span class="previous">previous week: 221</span><span class="date">05 mar 2015</span><span id="gauge-2" class="svg"></span><span class="count">957k</span>
+                </div>
+                <div class="tile table-cell expandable gauge">
+                    <h2>Batch Job Timeliness</h2><span class="divider"></span><span class="previous">previous week: 221</span><span class="date">05 mar 2015</span><span id="gauge-3" class="svg"></span><span class="count">3.5M</span>
+                </div>
+                <div class="tile table-cell expandable gauge">
+                    <h2>Customer Count</h2><span class="divider"></span><span class="previous">previous week: 221</span><span class="date">05 mar 2015</span><span id="gauge-4" class="svg"></span><span class="count">674k</span>
+                </div>
+                <div class="tile table-cell expandable gauge">
+                    <h2>Business Impacting Outages</h2><span class="divider"></span><span class="previous">previous week: 221</span><span class="date">05 mar 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-view>
