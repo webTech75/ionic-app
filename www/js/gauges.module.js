@@ -314,7 +314,7 @@ Gauge.prototype.create = function(element, data, options) {
 	});
 
 	// draw labels
-	drawText(this.renderer, data.label.min, cx + ((radius - width*0.15) * Math.cos((startAngle)*Math.PI/180)), cy + ((radius + height*0.6) * - Math.sin((startAngle)*Math.PI/180)), {
+	drawText(this.renderer, data.label.min, cx + ((radius + width*0.1) * Math.cos((startAngle)*Math.PI/180)), cy + ((radius + height) * - Math.sin((startAngle)*Math.PI/180)), {
 		'group': group,
 		'attr': {
 			'fill': opts.text.color,
@@ -322,7 +322,7 @@ Gauge.prototype.create = function(element, data, options) {
 			'font-size': opts.text.size ? opts.text.size : height*0.1
 		}
 	});
-	drawText(this.renderer, data.label.max, cx + ((radius - width*0.20) * Math.cos((endAngle)*Math.PI/180)), cy + ((radius + height * 0.6) * - Math.sin((endAngle)*Math.PI/180)), {
+	drawText(this.renderer, data.label.max, cx + ((radius + width*0.1) * Math.cos((endAngle)*Math.PI/180)), cy + ((radius + height) * - Math.sin((endAngle)*Math.PI/180)), {
 		'group': group,
 		'attr': {
 			'fill': opts.text.color,

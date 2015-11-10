@@ -18,10 +18,15 @@ angular.module('astro-app')
 				url: '/app',
 				abstract: true,
 				templateUrl: 'templates/astro.html',
-				controller: 'AppCtrl'
+				controller: 'AppCtrl as vm'
 			})
 			.state('app.overview', {
 				url: '/overview',
+				resolve: {
+					backendData: function(BackendService) {
+						return BackendService.getOverviewData();
+					}
+				},
 				views: {
 					'appContent': {
 						templateUrl: 'templates/overview.html',
