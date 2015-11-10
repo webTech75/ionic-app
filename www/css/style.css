@@ -1,17 +1,17 @@
 /* Empty. Add your own CSS if you like */
-
-
+ 
+ 
 /* *****************************sidemenu style ******************************* */
-
+ 
 .menu-animated {
     -webkit-transition: -webkit-transform 1500ms ease;
     -moz-transition: -moz-transform 1500ms ease;
     transition: transform 1500ms ease;
 }
-
-
+ 
+ 
 /* ************************overview page style *************************** */
-
+ 
 .div-table {
     display: table;
     width: 100%;
@@ -25,11 +25,11 @@
     top: 45px;
     bottom: 0px;
 }
-
+ 
 .div-table-row {
     height: 29.5%;
 }
-
+ 
 .table {
     display: table;
     border-collapse: separate;
@@ -37,14 +37,14 @@
     table-layout: fixed;
     width: 100%;
 }
-
+ 
 .table-cell {
     display: table-cell;
     overflow: hidden;
     word-wrap: break-word;
     position: relative;
 }
-
+ 
 .tile {
     background-color: white;
     border: 1px solid #ECECEC;
@@ -52,39 +52,39 @@
     padding: 20px;
     border-spacing: 20px 10px;
 }
-
+ 
 .div-table-col {
     display: table-cell;
     overflow: hidden;
     word-wrap: break-word;
     position: relative;
 }
-
+ 
 .nav-bar-block {
     position: absolute;
     z-index: 0;
     height: 60px!!mportant;
 }
-
+ 
 .bar {
     height: 60px;
     /*background-color: #f8f8f8;*/
 }
-
+ 
 .bar-stable {}
-
+ 
 .titleSection {
     padding-left: 100px;
     background: #f4f4f4;
     padding-top: 3px;
 }
-
+ 
 .titleSection h1 {
     color: black;
     font-size: 22px;
     margin-bottom: 3px;
 }
-
+ 
 .container {
     position: absolute;
     top: 60px;
@@ -93,17 +93,17 @@
     left: 0px;
     background: #f4f4f4
 }
-
+ 
 #row1 {
     height: 55%;
-
+ 
 }
-
+ 
 #row2 {
     height: 46%;
     margin-top: -10px;
 }
-
+ 
 h2 {
     color: black;
     font-size: 16px;
@@ -170,9 +170,125 @@ h2 {
     color: black;
     text-align: center;
      padding-bottom: 5px;
-
+ 
 }
-
+/******************************** Popup div style *****************************************/
+.blur-on {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+.popup-overlay{
+  position: absolute;
+  opacity:0.5;
+  width:100%;
+  height: 100%;
+  z-index: 9998;
+  background: #333;
+  display: none;
+}
+.popup-overlay.show{
+  display: block;
+}
+.popupDiv
+{
+    background: #fff;
+    color: #eee;
+    position: absolute;
+    
+    z-index: 9999;
+    border: 1px solid gray;
+   width: 80%;
+    height: 50%;
+  visibility: visible;
+  margin: auto;
+  
+  left: 100px;
+  transition: all .7s;
+  transition-duration:all 0.7s;
+ 
+}
+.popupDiv.topPlace{
+  top:-500px;
+  z-index: 9999;
+}
+.popupDiv.show{
+  border: 1px solid gray;
+   width: 80%;
+    height: 50%;
+  visibility: visible;
+  margin: auto;
+  top:200px;
+  left: 100px;
+  z-index: 9999;
+   transition: all .7s;
+}
+/************************************************** GAUGES FLIP SIDE GRAPH STYLE */
+ 
+ 
+/*div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-background,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-grid,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-title,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-subtitle,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-axis,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-axis-labels,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-legend,
+div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-series-group>.highcharts-series-1
+{
+  display: none!important;
+}*/
+ 
+.gaugesBackGraphContainer {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    right: 20px;
+    height: 30%;
+    /*  overflow: hidden;
+*/
+}
+ 
+.history-chart {
+    height: 100%!important;
+}
+ 
+.history-chart .highcharts-container>svg> text,
+.history-chart .highcharts-container>svg> .highcharts-background {
+    visibility: hidden;
+}
+ 
+.history-chart .highcharts-container>svg path {
+    stroke: white;
+}
+ 
+.history-chart .highcharts-container>svg>.highcharts-series-group>.highcharts-markers path {
+    fill: #027BB4;
+    stroke-width: 3px;
+}
+ 
+.gaugesData {
+    font-size: 12px;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    right: 20px;
+}
+ 
+.gaugesData ul li {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 5% 0px 5% 0px;
+    border-top: 1px solid #fff;
+}
+ 
+.gaugesData ul li span {
+    float: right;
+    /*padding-left: 25%;*/
+}
+ 
+ 
 /* --------------------chart page style----------------------------*/
 #chartSwiper {
     position: absolute;
@@ -204,7 +320,7 @@ h2 {
     color: black;
     border-bottom: 2px solid #22a0d1;
   }
-
+ 
   .gallery-thumbs .swiper-slide {
     width: 25%;
     height: 100%;
@@ -234,44 +350,44 @@ h2 {
     width: 100%;
     text-align: center;
 }
-
+ 
 .highcharts-button{
   visibility: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 /**
  * Swiper 3.1.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -726,13 +842,13 @@ button.swiper-pagination-bullet {
   }
 }
 /* ************************************************************************** Swiper 3.1.2 end ***************************************** */
-
+ 
 /* ****** iPhone 2G, 3G, 4, 4S Media Queries***************************************** */
-
+ 
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) { 
-
+ 
 div .trigger {
     display: none;
 }
@@ -757,7 +873,7 @@ div .trigger {
 .gauge .count {
     padding-bottom: 3px;
 }
-
+ 
 .gallery-thumbs .swiper-slide {
     width: 35%;
     white-space: nowrap;

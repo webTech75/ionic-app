@@ -56,6 +56,30 @@
 	};
 
 	function overviewController(GaugeService, GraphService) {
+		
+		 $(".date").click(function(e) {
+           e.stopPropagation();
+           if ($(".popupDiv").hasClass('show')) {
+               $(".container").toggleClass("blur-on");
+               $('.popupDiv').toggleClass('topPlace');
+               $('.popup-overlay').toggleClass('show');
+               $(".popupDiv").toggleClass("show");
+           } else {
+               $(".popupDiv").toggleClass("show");
+                $('.popup-overlay').toggleClass('show');
+               $('.popupDiv').toggleClass('topPlace');
+               $(".container").toggleClass("blur-on");
+           }
+ 
+       });
+ 
+       $('.popup-overlay').on('click', function() {
+           $(".popupDiv").removeClass("show");
+           $('.popupDiv').addClass('topPlace');
+           $(".container").removeClass("blur-on");
+            $('.popup-overlay').toggleClass('show');
+       });
+ 
 	    var self = this;
 
 	    self.flipped = {
@@ -149,161 +173,17 @@
 	    drawGraph();
 
 	    // GAUGES FIGURE BACK GRAPH
-	    self.chartObjGauges;
-
 	    function drawGraphGauges() {
-	        /*var graphSeries = [{
-	            name: 'Tokyo',
-	            data: [7.0, 6.9, 7, 7, 7.2]
-	        }];*/
-
-	        //self.chartObjGauges = GraphService.graphConfig(graphSeries);
 	        GraphService.drawHistory('history1');
+	        GraphService.drawHistory('history2');
+	        GraphService.drawHistory('history3');
+	        GraphService.drawHistory('history4');
 	    };
 	    drawGraphGauges();
 
-	};
-
-	function overviewControllerOld($scope, $ionicModal, $timeout, $ionicLoading, $state, GraphService, GaugeService) {
-	    var self = this;
-
-	    $ionicLoading.show({
-	        content: 'Loadin',
-	        animation: 'fade-in',
-	        showBackdrop: false,
-	        maxWidth: 200,
-	        showDelay: 0
-	    });
-	    $timeout(function() {
-	        $ionicLoading.hide();
-	    }, 1000);
-
-	    $scope.galleryTop = new Swiper('.gallery-top', {
-	        nextButton: '.swiper-button-next',
-	        prevButton: '.swiper-button-prev',
-	        spaceBetween: 10,
-	        parallax: true,
-	        speed: 600,
-	    });
-	    $scope.galleryThumbs = new Swiper('.gallery-thumbs', {
-	        spaceBetween: 10,
-	        centeredSlides: true,
-	        slidesPerView: 'auto',
-	        touchRatio: 0.2,
-	        slideToClickedSlide: true,
-	        speed: 600,
-	    });
-	    $scope.galleryTop.params.control = $scope.galleryThumbs;
-	    $scope.galleryThumbs.params.control = $scope.galleryTop;
-
-	    //chart data for desktop/ipad
-	    if (!navigator.userAgent.match(/iphone/i)) {
-	        $scope.graphSeries = [{
-	            name: 'Tokyo',
-	            marker: {
-	                symbol: 'square'
-	            },
-	            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
-	                y: 26.5,
-	                marker: {
-	                    symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
-	                }
-	            }, 23.3, 18.3, 13.9, 9.6]
-
-	        }, {
-	            name: 'London',
-	            marker: {
-	                symbol: 'diamond'
-	            },
-	            data: [{
-	                y: 3.9,
-	                marker: {
-	                    symbol: 'url(http://www.highcharts.com/demo/gfx/snow.png)'
-	                }
-	            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-	        }];
-	    } else {
-	        //column chart data for iphones
-	        $scope.graphSeries = [{
-	            name: 'Tokyo',
-	            marker: {
-	                symbol: 'square'
-	            },
-	            data: [7.0, 6.9, 9.5, {
-	                y: 14.5,
-	                marker: {
-	                    symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
-	                }
-	            }, 18.2, 21.5]
-
-	        }, {
-	            name: 'London',
-	            marker: {
-	                symbol: 'diamond'
-	            },
-	            data: [{
-	                y: 3.9,
-	                marker: {
-	                    symbol: 'url(http://www.highcharts.com/demo/gfx/snow.png)'
-	                }
-	            }, 4.2, 5.7, 8.5, 11.9]
-	        }];
-	    }
-	    $scope.chartConfig = GraphService.graphConfig($scope.graphSeries);
-
-	    // draw gauges
-	    GaugeService.draw('gauge-1', {
-	        min: 0,
-	        max: 100,
-	        label: {
-	            min: 0,
-	            max: 100
-	        },
-	        value: 20,
-	        direction: 'up',
-	        color: '#5ca946'
-	    });
-
-	    GaugeService.draw('gauge-2', {
-	        min: 0,
-	        max: 100,
-	        label: {
-	            min: 0,
-	            max: 100
-	        },
-	        value: 40,
-	        direction: 'down',
-	        color: '#027bb4'
-	    }, {
-	        gauge: {
-	            type: 'single'
-	        }
-	    });
-
-	    GaugeService.draw('gauge-3', {
-	        min: 0,
-	        max: 100,
-	        label: {
-	            min: 0,
-	            max: 100
-	        },
-	        value: 60,
-	        direction: 'down',
-	        color: '#fcb134'
-	    });
-
-	    GaugeService.draw('gauge-4', {
-	        min: 0,
-	        max: 100,
-	        label: {
-	            min: 0,
-	            max: 100
-	        },
-	        value: 80,
-	        direction: 'up',
-	        color: '#dd0303'
-	    });
 
 	};
+
+	
 
 	function playlistController($scope, $stateParams) {};

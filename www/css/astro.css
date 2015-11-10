@@ -337,7 +337,7 @@ p, h1, h2, h3, h4, h5 {
 }
 
 #overview .flex-box .flex-container .tile .figure.back {
-	background-color: #c9c9c9;
+	background-color: #027BB4;
 	color: white;
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
@@ -370,21 +370,30 @@ div.gaugesBackGraphContainer>.chart>.highcharts-container>svg>.highcharts-series
 {
 	visibility: hidden;
 }
+.history-chart .highcharts-container>svg path {
+	stroke:white;
+}
+.history-chart .highcharts-container>svg>.highcharts-series-group>.highcharts-markers path{
+	fill:#027BB4;
+	stroke-width:3px;
+}
 .gaugesData{
+	font-size: 12px;
 	position: absolute;
     top: 150px;
     left: 20px;
     right: 20px;
-    height: 55%;
+
 }
 .gaugesData ul li{
+	float: left;
 	width: 100%;
 	height: auto;
 	padding:5% 0px 5% 0px;
 	border-top: 1px solid #fff;
 }
-.gaugesData span{
+.gaugesData ul li span{
 	float: right;
 	/*padding-left: 25%;*/
-	padding:5% 0px 5% 0px;
+
 }

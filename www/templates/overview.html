@@ -3,15 +3,20 @@
         <div class="header">
             <span class="hamburger-icon"></span>
             <span class="page-title">
-        		<h1>Astro Executive Dashboard</h1>
-        	</span>
+                <h1>Astro Executive Dashboard</h1>
+            </span>
             <span class="header-options">
-        		<span class="mail"></span>
+                <span class="mail"></span>
             <span class="reports"></span>
             <span class="date">September 31, 2015</span>
             </span>
         </div>
+            <div class="popupDiv topPlace">
+                
+            </div>
+            
         <div id="overview" class="container">
+            <div class="popup-overlay"></div>
             <div class="flex-box">
                 <div class="flex-container">
                     <div class="tile" ng-class="{'flipped': vm.flipped[1]}" ng-click="vm.flipped[1] = !vm.flipped[1]">
@@ -30,29 +35,29 @@
                         <div class="figure front message-center">
                             <h1>Message Center</h1>
                             <span class="messages">
-								<ul>
-							        <li>
-										<h2>Title Goes Here</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-									</li>
-							        <li>
-										<h2>Title Goes Here</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-									</li>
-							        <li>
-										<h2>Title Goes Here</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-									</li>
-							        <li>
-										<h2>Title Goes Here</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-									</li>
-							        <li>
-										<h2>Title Goes Here</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-									</li>
-						     	</ul>
-							</span>
+                               <ul>
+                                   <li>
+                                       <h2>Title Goes Here</h2>
+                                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                   </li>
+                                   <li>
+                                       <h2>Title Goes Here</h2>
+                                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                   </li>
+                                   <li>
+                                       <h2>Title Goes Here</h2>
+                                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                   </li>
+                                   <li>
+                                       <h2>Title Goes Here</h2>
+                                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                   </li>
+                                   <li>
+                                       <h2>Title Goes Here</h2>
+                                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                   </li>
+                                </ul>
+                           </span>
                         </div>
                         <div class="figure back">
                             <p>Back</p>
@@ -67,7 +72,7 @@
                             <span id="gauge-3" class="gauge"></span>
                             <span class="value">120k</span>
                             <span class="sub-value">
-								<span class="last-week">Last Week: 200k</span>
+                               <span class="last-week">Last Week: 200k</span>
                             <span class="frequency">Weekly</span>
                             </span>
                         </div>
@@ -78,18 +83,12 @@
                                 <div id="history1" class="history-chart"></div>
                             </div>
                             <div class="gaugesData">
-                            	<ul>
-                            	<span>55K</span>
-                            		<li>12 Jan 2015</li>
-                            		<span>49K</span>
-                            		<li>01 Feb 2015</li>
-                            		<span>45K</span>
-                            		<li>25 Mar 2015</li>
-                            		<span>30K</span>
-                            		<li>29 Apr 2015</li>
-                            		
-                            		<!-- <li>30 May 2015</li> -->
-                            	</ul>
+                                <ul>
+                                    <li>12 Jan 2015<span>55K</span></li>
+                                    <li>01 Feb 2015<span>55K</span></li>
+                                    <li>25 Mar 2015<span>55K</span></li>
+                                    <li>29 Apr 2015<span>55K</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -102,12 +101,23 @@
                             <span id="gauge-4" class="gauge"></span>
                             <span class="value">57k</span>
                             <span class="sub-value">
-								<span class="last-week">Last Week: 100k</span>
+                               <span class="last-week">Last Week: 100k</span>
                             <span class="frequency">Weekly</span>
                             </span>
                         </div>
                         <div class="figure back">
                             <p>Back</p>
+                            <div class="gaugesBackGraphContainer">
+                                <div id="history2" class="history-chart"></div>
+                            </div>
+                            <div class="gaugesData">
+                                <ul>
+                                    <li>12 Jan 2015<span>55K</span></li>
+                                    <li>01 Feb 2015<span>55K</span></li>
+                                    <li>25 Mar 2015<span>55K</span></li>
+                                    <li>29 Apr 2015<span>55K</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,12 +129,23 @@
                             <span id="gauge-5" class="gauge"></span>
                             <span class="value">210k</span>
                             <span class="sub-value">
-								<span class="last-week">Last Week: 100k</span>
+                               <span class="last-week">Last Week: 100k</span>
                             <span class="frequency">Weekly</span>
                             </span>
                         </div>
                         <div class="figure back">
                             <p>Back</p>
+                            <div class="gaugesBackGraphContainer">
+                                <div id="history3" class="history-chart"></div>
+                            </div>
+                            <div class="gaugesData">
+                                <ul>
+                                    <li>12 Jan 2015<span>55K</span></li>
+                                    <li>01 Feb 2015<span>55K</span></li>
+                                    <li>25 Mar 2015<span>55K</span></li>
+                                    <li>29 Apr 2015<span>55K</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,12 +157,23 @@
                             <span id="gauge-6" class="gauge"></span>
                             <span class="value">35k</span>
                             <span class="sub-value">
-								<span class="last-week">Last Week: 50k</span>
+                               <span class="last-week">Last Week: 50k</span>
                             <span class="frequency">Weekly</span>
                             </span>
                         </div>
                         <div class="figure back">
                             <p>Back</p>
+                            <div class="gaugesBackGraphContainer">
+                                <div id="history4" class="history-chart"></div>
+                            </div>
+                            <div class="gaugesData">
+                                <ul>
+                                    <li>12 Jan 2015<span>55K</span></li>
+                                    <li>01 Feb 2015<span>55K</span></li>
+                                    <li>25 Mar 2015<span>55K</span></li>
+                                    <li>29 Apr 2015<span>55K</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
